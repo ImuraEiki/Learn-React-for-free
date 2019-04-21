@@ -4,18 +4,16 @@ import React from 'react'
 import './App.css';
 import './index.css';
 import './style.css';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import MainContents from './components/MainContents'
 import TodoItem from './TodoItem'
+import todosData from './todosData'
 
 function App(){
+  const todoItems = todosData.map(item => <TodoItem key={item.id} item={item} />
+  )
+  
   return(
     <div className="todo-list">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+      {todoItems}
     </div>
   )
 }
