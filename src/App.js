@@ -1,20 +1,24 @@
-import React from 'react'
-// import React, { Component } from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import './index.css';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import MainContents from './components/MainContents'
+import React from "react"
 
-function App(){
-  return(
-    <div>
-      <Header />
-      <MainContents />
-      <Footer />
-    </div>
-  )
+// https://scrimba.com/p/p4Mrt9/cQnMDHD
+
+class App extends React.Component {
+  // initialize some value
+    constructor() {
+        super()
+        this.state = {
+          answer: "Yes!"
+        }
+    }
+    
+    render() {
+        return (
+            <div>
+                <h1>Is state important to know? {this.state.answer}</h1>
+                <ChildComponent answer={this.state.answer} />
+            </div>
+        )
+    }
 }
 
-export default App;
+export default App
