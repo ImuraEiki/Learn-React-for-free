@@ -10,16 +10,22 @@ class App extends Component{
   constructor(){
     super()
     this.state = {
-      isLoggedIn : true
-    }
+      isLoggedIn : false   }
   }
   
 
   render(){
+
+    let wordDisplay
+    if(this.state.isLoggedIn === true){
+      wordDisplay = "in!"
+    }else{
+      wordDisplay = "out!"
+    }
+
     return (
         <div>
-          <h1>You are currently logged</h1>
-          { this.state.isLoggedIn ? <p>in</p> : <p>out</p>}
+          <h1>You are currently logged {wordDisplay}</h1>
         </div>
     )
   }
