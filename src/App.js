@@ -1,24 +1,14 @@
-import React,{Component} from "react"
-
-// https://scrimba.com/p/p4Mrt9/cQnMDHD
+import React, { Component } from 'react';
+import Text from './Text';
 
 class App extends Component {
-    constructor(){
-      super()
-      this.state = {
-        name: "Sally",
-        age: 13
-      }
-    }
-
-    render() {
-        return (
-            <div>
-                <h1>{this.state.name}</h1>
-                <h3>{this.state.age} yaers old</h3>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <Text text='おっぱいが現れたり消えたりする' />
+      </div>
+    )
+  }
 }
 
-export default App
+export default App;
