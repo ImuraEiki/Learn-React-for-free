@@ -1,20 +1,20 @@
 import React from 'react'
 // import React, { Component } from 'react';
 // import logo from './logo.svg';
-import './App.css';
-import './index.css';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import MainContents from './components/MainContents'
 
-function App(){
-  return(
-    <div>
-      <Header />
-      <MainContents />
-      <Footer />
-    </div>
-  )
+class App extends React.Component {
+  yourMethodHere(){
+    
+  }
+
+  render(){
+    return(
+      <div>
+        <h1>{this.props.whatever}</h1>
+      </div>
+    )
+  }
 }
+
 
 export default App;
