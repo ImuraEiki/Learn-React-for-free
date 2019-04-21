@@ -1,14 +1,28 @@
-import React, { Component } from 'react';
-import Text from './Text';
+import React, {Component} from "react"
 
-class App extends Component {
-  render() {
+// Given a stateless functional component, add state to it
+// state should have a property called `isLoggedIn` which is a boolean
+// (true if logged in, false if not)
+// Then, give your best shot at rendering the word "in" if the user is logged in
+// or "out" if the user is logged out.
+
+class App extends Component{
+  constructor(){
+    super()
+    this.state = {
+      isLoggedIn : true
+    }
+  }
+  
+
+  render(){
     return (
-      <div>
-        <Text text='おっぱいが現れたり消えたりする' />
-      </div>
+        <div>
+          <h1>You are currently logged</h1>
+          { this.state.isLoggedIn ? <p>in</p> : <p>out</p>}
+        </div>
     )
   }
 }
 
-export default App;
+export default App
