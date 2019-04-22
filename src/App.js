@@ -1,20 +1,18 @@
-import React from 'react'
-// import React, { Component } from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import './index.css';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import MainContents from './components/MainContents'
+import React from "react"
 
-function App(){
-  return(
-    <div>
-      <Header />
-      <MainContents />
-      <Footer />
-    </div>
-  )
+function handleClick() {
+    console.log("I was clicked")
 }
 
-export default App;
+function App() {
+    return (
+        <div>
+            <img src="https://www.fillmurray.com/200/100"/>
+            <br />
+            <br />
+            <button onClick={handleClick}>Click me</button>
+        </div>
+    )
+}
+
+export default App
