@@ -19,11 +19,18 @@ class Square extends React.Component {
 
 class Board extends React.Component {
 
+//初期値を入れる
   constructor(props){
       super(props);
       this.state = {
           squares: Array(9).fill(null),
       };
+  }
+
+  handleClick(i){
+    const squares = this.state.squares.slice();
+    squares[i] = 'X';
+    this.setState({squares: squares});
   }
 
 
